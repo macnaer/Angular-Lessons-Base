@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
+import { HeadComponent } from './head/head.component';
+import { MainComponent } from './main/main.component';
+import { ListComponent } from './main//List/list.component';
 
 @NgModule({
-  declarations: [AppComponent, TestComponent],
+  declarations: [AppComponent, HeadComponent, MainComponent, ListComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
