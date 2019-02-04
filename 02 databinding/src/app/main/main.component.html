@@ -1,4 +1,9 @@
 <div class="main">
     <h2>Component {{ component }}!</h2>
+    <button  [class]="newClass" [disabled]= "!newButton" (click)="start()">Start</button>
+    <p>{{launch}}</p>
+    
 </div>
+<input type="text" class="form-control inputWidth" (input)="restart($event)" />
+<p>{{rockerName}}</p>
 <app-list></app-list>

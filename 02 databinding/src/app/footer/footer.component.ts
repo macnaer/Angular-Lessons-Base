@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() { }
-  title = "Footer";
+  title: string = "Footer";
+  siteName: string = "example.com";
+  online: number = 1234;
+
+  getSiteName(){
+    return this.siteName;
+  }
 
   ngOnInit() {
   }

@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
     component = 'MAIN';
+
+    newButton = false;
+    newClass ="btn btn-primary";
+    launch = "Rocket is ready!";
+    rockerName = "";
+
+    constructor(){
+        setTimeout(()=>{
+            this.newButton = true;
+        }, 2000);
+    }
+
+    start(){
+        this.launch = "Rocket launched!";
+        this.newButton = false;
+    }
+    restart(event:Event){
+        this.rockerName = (<HTMLInputElement>event.target).value;
+    }
 }
