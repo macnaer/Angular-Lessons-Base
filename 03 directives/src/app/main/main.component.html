@@ -1,0 +1,21 @@
+<div class="main">
+    <h2>Component {{ component }}!</h2>
+    <button  [class]="newClass" [disabled]= "!newButton" (click)="start()">Start</button>
+    <p>{{launch}}</p>
+    <p *ngIf="btnPressed; else notStarted">Directives  Rocker start FAIL.</p>
+    <ng-template #notStarted>
+        <p>
+            Rocket start success.
+        </p>
+    </ng-template>
+</div>
+<input type="text" class="form-control inputWidth" (input)="restart($event)" />
+<p>{{rockerName}}</p>
+<p 
+[ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: roketStatus === 'Online'}"
+>Rocket is {{roketStatus}}</p>
+<button class="btn btn-primary">Add person</button>
+<p *ngFor="let person of persons">{{person}}</p>
+<p *ngFor="let person of persons; let index = index">{{index}} = {{person}}</p>
+<app-list></app-list>

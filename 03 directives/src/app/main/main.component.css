@@ -1,0 +1,22 @@
+.main {
+    background: darkorange;
+}
+
+.newClass {
+    color: crimson;
+    ;
+}
+
+.inputWidth {
+    width: 20%;
+}
+
+.online {
+    color: rgb(245, 245, 245);
+    font-size: 1rem;
+}
+
+.offline {
+    color: darkorange;
+    font-size: 1.4rem;
+}
