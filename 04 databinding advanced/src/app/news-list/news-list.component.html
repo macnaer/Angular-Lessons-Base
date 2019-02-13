@@ -1,24 +1,5 @@
-<div class="col">
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="postTitle"
-    placeholder="Blog title"
-  />
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="postContent"
-    placeholder="Blog post"
-  />
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="postAuthor"
-    placeholder="Blog author"
-  />
-  <button class="btn btn-primary" (click)="AddPost()">Add post</button>
-</div>
+<p class="form-edit">New Blog</p>
+<app-add-post (onAddPost)="updatePosts($event)"></app-add-post>
 <div class="col">
   <app-news-item *ngFor="let item of PostsArray" [post]="item"></app-news-item>
 </div>

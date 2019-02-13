@@ -10,22 +10,9 @@ export class NewsListComponent implements OnInit {
     { title: "Test title", post: "Test content", author: "Bill" }
   ];
 
-  postTitle = "";
-  postContent = "";
-  postAuthor = "";
-
-  AddPost(){
-    console.log("AddPOst");
-    this.PostsArray.push({
-      title: this.postTitle,
-      post: this.postContent,
-      author: this.postAuthor
-    });
-    this.postTitle = "";
-    this.postContent = "";
-    this.postAuthor = "";
+  updatePosts(PostsArray: { title: string; post: string; author: string }) {
+    this.PostsArray.push(PostsArray);
   }
-
   constructor() {}
 
   ngOnInit() {}
