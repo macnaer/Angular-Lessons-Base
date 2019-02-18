@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 
 @Component({
   selector: "app-news-list",
   templateUrl: "./news-list.component.html",
   styleUrls: ["./news-list.component.css"]
 })
-export class NewsListComponent implements OnInit {
+export class NewsListComponent implements OnInit, OnDestroy {
   PostsArray: [{ title: string; post: string; author: string }] = [
     { title: "Test title", post: "Test content", author: "Bill" }
   ];
@@ -13,7 +13,11 @@ export class NewsListComponent implements OnInit {
   updatePosts(PostsArray: { title: string; post: string; author: string }) {
     this.PostsArray.push(PostsArray);
   }
-  constructor() {}
-
+  DeletePost() {
+    this.PostsArray.splice(0, 1);
+  }
+  ngOnDestroy(){
+    console.log("OnDestroy");
+  }
   ngOnInit() {}
 }

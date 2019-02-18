@@ -1,6 +1,9 @@
 <div class="col">
-  <input type="text" class="form-control" [(ngModel)]="postTitle" placeholder="Blog title" />
-  <input type="text" class="form-control" [(ngModel)]="postContent" placeholder="Blog post" />
+  <!-- <input type="text" class="form-control" [(ngModel)]="postTitle" placeholder="Blog title" /> -->
+  <input type="text" class="form-control" #BlogTitle placeholder="Blog title" />
+  <!-- <input type="text" class="form-control" [(ngModel)]="postContent" placeholder="Blog post" /> -->
+  <input type="text" class="form-control" #BlogPost placeholder="Blog post" />
   <input type="text" class="form-control" [(ngModel)]="postAuthor" placeholder="Blog author" />
-  <button class="btn btn-primary" (click)="AddPost()">Add post</button>
+  <button class="btn btn-primary" (click)="AddPost(BlogTitle)">Add post</button>
+
 </div>

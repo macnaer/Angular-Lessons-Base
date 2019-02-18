@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from "@angular/core";
 
 
 @Component({
@@ -12,17 +12,20 @@ export class AddPostComponent implements OnInit {
   postAuthor = "";
 
   @Output() onAddPost = new EventEmitter<{title: string; post: string; author: string}>();
+  @ViewChild("BlogPost") BlogPost: ElementRef;
 
-  AddPost() {
+  AddPost(BlogTitle: HTMLInputElement) {
+    console.log(this.BlogPost);
     this.onAddPost.emit({
-      title: this.postTitle,
-      post: this.postContent,
+      title: BlogTitle.value,
+      post: this.BlogPost.nativeElement.value,
       author: this.postAuthor
     });
     this.postTitle = "";
     this.postContent = "";
     this.postAuthor = "";
   }
+
 
   constructor() {}
 
