@@ -1,0 +1,35 @@
+.main-menu {
+    text-align: center;
+}
+
+.main-menu ul {
+    flex-direction: inherit;
+    display: inline-block;
+    padding-left: 0;
+}
+
+.main-menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.main-menu ul li a {
+    display: inline-block;
+    padding: 3px 15px;
+    margin: 0 5px;
+    background-color: orangered;
+    color: bisque;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+.main-menu ul li a:hover {
+    text-decoration: none;
+    color: brown;
+    background-color: #fff;
+    border: 2px solid blueviolet;
+}
+
+.main-menu ul li a.active {
+    color: yellow;
+}
