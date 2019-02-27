@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <div>Title: {{ post.title }}</div>
+        <div>Post: {{ post.post }}</div>
+        <div>Author: {{ post.author }}</div>
+        <!--<button class="btn btn-primary" [routerLink]="['/blog', post.id, post.title]">-->
+        <button class="btn btn-primary" [routerLink]="['/blog', post.id, post.title]">
+          Read More
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
