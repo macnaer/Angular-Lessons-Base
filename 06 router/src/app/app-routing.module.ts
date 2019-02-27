@@ -6,6 +6,7 @@ import { DocsComponent } from './docs/docs.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: "docs", component: DocsComponent },
   { path: "resources", component: ResourcesComponent },
   { path: "blog", component: BlogComponent },
-  { path: "blog/:id", component: BlogPostComponent }
+  //{ path: "blog/:id", component: BlogPostComponent }
+  { path: "blog/:id/:title/:post/:author", component: BlogSinglePostComponent }
 ];
 
 @NgModule({

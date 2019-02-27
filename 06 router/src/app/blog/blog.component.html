@@ -1,5 +1,9 @@
 <div class="container">
   <div class="row">
-    <h1>Blog</h1>
+    <div class="col">
+      <h1>Blog</h1>
+      
+    </div>
   </div>
 </div>
+<app-blog-post class="list-group-item" *ngFor="let item of PostsArray" [post]="item"></app-blog-post>
