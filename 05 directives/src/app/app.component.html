@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 appBackground [hoverColor]="'pink'" [defaultBG]="'blue'">Angular Hero</h2>
+
+  <ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let item of arr"
+      (click)="onClick(item)"
+    >
+      {{ item }}
+    </li>
+  </ul>
+  <div [ngSwitch]="active">
+    <p *ngSwitchCase="1">First</p>
+    <p *ngSwitchCase="2">Second</p>
+    <p *ngSwitchCase="3">Third</p>
+    <p *ngSwitchCase="4">Four</p>
+    <p *ngSwitchDefault>Default</p>
+  </div>
+</div>
